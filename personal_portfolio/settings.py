@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '5gfgn(8$%d3%)g12s*(igd2-&!@y@k1p3#oek_y923-yw$9liu'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['orion8810.pythonanywhere.com']
 
 
 # Application definition
@@ -120,10 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-os.path.join(BASE_DIR, 'static'),
 
-]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
